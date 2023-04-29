@@ -42,7 +42,7 @@ class BraiileVeiwSet(viewsets.ModelViewSet):
     def search(self, request):
 
         # 사진 쌓이는것 방지 (메모리 관련 문제)
-        temp = os.path.dirname(os.getcwd()) + r'\media'
+        temp ='\media'
         file_name = os.listdir(temp)[0]
         full_name = os.path.abspath(temp + "\\" + file_name)
         braille = play(full_name)
