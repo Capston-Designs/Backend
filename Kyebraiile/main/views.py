@@ -39,7 +39,24 @@ class BraiileVeiwSet(viewsets.ModelViewSet):
     queryset = BraiilePicture.objects.all()
     serializer_class = BraiilePictureSerializer
 
+    # @action(detail=False, methods=['GET'])
+    # def search(self, request):
+
+    #     # 사진 쌓이는것 방지 (메모리 관련 문제)
+    #     temp ='./media'
+    #     file_name = os.listdir(temp)[0]
+    #     full_name = os.path.abspath(temp + "\\" + file_name)
+    #     braille = play(full_name)
+    #     answer = str(PyJsHoisted_analyze_b_(1, braille))
+    #     os.remove(full_name)
+
+    #     # DB 삭제
+    #     BraiilePicture.objects.all().delete()
+
+    #     return JsonResponse({'answer': answer, 'braille': braille})
+    
     @action(detail=False, methods=['GET'])
+<<<<<<< HEAD:Kyebraiile/main/views.py
     def translate(self, request):
 
         # 사진 쌓이는것 방지 (메모리 관련 문제)
@@ -78,6 +95,4 @@ class KoreanVeiwSet(viewsets.ModelViewSet):
         # DB 삭제
 
         return JsonResponse({'korean': korean})
-    
-    
     
