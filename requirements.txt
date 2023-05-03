@@ -16,6 +16,7 @@ MarkupSafe==2.1.2
 packaging==23.1
 Pillow==9.5.0
 pyjsparser==2.7.1
+pytesseract==0.3.10
 pytz==2023.3
 pytz-deprecation-shim==0.1.0.post0
 requests==2.29.0
