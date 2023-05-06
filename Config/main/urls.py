@@ -31,7 +31,6 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('index/', views.index_view, name='index'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
